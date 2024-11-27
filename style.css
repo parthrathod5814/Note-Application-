@@ -1,0 +1,412 @@
+
+
+
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+
+    --black-color: black ;
+    --White-color: white ;
+    --grey-color: gray;
+    --pink-color : pink;
+    --searchbox-color :white;
+    --searchcolor-color:black;
+    --serchPHColor-color:gray;
+}
+
+.dark-theme{
+
+    --black-color: white ;
+    --White-color: black;
+    --grey-color: white;
+    --pink-color:black;
+    --searchbox-color :rgb(28, 28, 28);
+    --searchcolor-color:white;
+    --serchPHColor-color:rgb(217, 217, 217);
+}
+
+.headre{
+
+    display: flex;
+    /* background-color: aqua; */
+    align-items: center;
+justify-content: center;
+}
+
+#search{
+
+    height: 20px;
+    width: 20px;
+    position: relative;
+    right: 30px;
+    cursor: pointer;
+}
+
+#modeicon{
+
+height: 20px;
+width: 20px;
+margin: 20px;
+cursor: pointer;
+}
+
+.conatiner{
+
+display: flex;
+justify-content: center;
+align-items: center;
+margin-left: 900px;
+position: absolute;
+
+}
+.conatiner input{
+
+    height: 30px;
+    width:180px;
+    color:var(--searchcolor-color);
+    font-size: 14px;
+    padding-left: 10px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    background-color: var(--searchbox-color);
+}
+
+body{
+    background-color: var(--pink-color);
+    /* background-color: rgb(0, 0, 0); */
+}
+
+p{
+    font-size: 45px;
+    text-align: center;
+    margin: 20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: var(--black-color);
+    position: relative;
+    left: 30px;
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+    display:grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+
+}
+
+
+button{
+    position: fixed;
+    right: 50px;
+    bottom: 20px;
+    border: none;
+    background: none;
+    font-size: 80px;
+    cursor: pointer;
+    z-index: 1;
+
+}
+
+.addnote{
+    height: 100px;
+    width: 100px;
+}
+
+.placeholder {
+    color: rgb(122, 122, 122);
+    position: absolute;
+    pointer-events: none;
+    /* opacity: 0.6; */
+    left: 15px;
+    top: 15px;
+    font-size: 18px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-text-wrapper {
+    position: relative;
+}
+
+.main-text {
+    min-height: 100px; 
+    padding: 10px;
+}
+
+
+.save{
+
+      height: 21px;
+    width: 21px;
+
+}
+
+.delete{
+
+    height: 23px;
+    width: 23px;
+
+}
+.note{
+
+    width: 350px;
+    height: 350px;
+    background-color: var(--White-color);
+    margin: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--grey-color);
+}
+
+::-webkit-scrollbar{
+ width: 0px;
+}
+.tool-bar{
+
+    width: 72px;
+    height: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    justify-content: end;
+    color: white;
+    margin-left: -13px;
+    background-color:black;
+    border-bottom-left-radius: 10px;
+    padding: 5px;
+    justify-content:space-evenly;
+    margin-bottom: 10px;
+    border: 1px solid var(--grey-color);
+
+} 
+
+.tool-bar input{
+
+    height: 30px;
+    width: 30px;
+    margin-top: -5px;
+    border: none;
+    background: none;
+    
+}
+
+header{
+
+    display: flex;
+}
+
+.title input{
+    border: none;
+    resize: none;
+    outline: none;
+    /* color: black; */
+    color:var(--black-color);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 50px;
+    width: 290px;
+ padding: 15px;
+    font-size: 23px;
+    background-color: var(--White-color);
+}
+
+
+.main-text{
+
+    background-color: var(--White-color);
+    height: 270px;
+    width: 100%;
+    /* background-color: black; */
+    color: var(--black-color);
+    border: none;
+    resize: none;
+    font-size: 17px;
+    padding: 15px;
+    outline: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: block;
+    overflow-y: auto; 
+  word-wrap:break-word; 
+  white-space: pre-wrap;
+}
+
+.footer{
+
+    height: 100px;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.edittool{
+    /* background-color: red; */
+    height: 80px;
+    width: 120px;
+    display: flex;
+    justify-self: right;
+    margin-right: 10px;
+    justify-content: right;
+ 
+}
+
+.edittool img{
+
+    height: 15px;
+    width: 15px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.date{
+
+    font-size: 14px;
+    margin: 0px;
+    margin-top: 5px;
+    display: flex;
+    justify-self: left;
+    font-family:'Courier New', Courier, monospace;
+    color: gray;
+}
+
+@media(max-width:500px){
+  
+    p{
+    height: auto;
+    width: auto;
+    font-size: 45px;
+    margin: 20px;
+    left: 0px;
+
+    display: none;
+    }
+
+.conatiner input{
+
+    height: 50px;
+    width:100%;
+    padding-left: 15px;
+    margin: 20px;
+    font-size: 22px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    outline: none;
+    display: flex;
+    justify-self: center;
+
+    position: relative;
+    left: 10px;
+  
+    /* display: none; */
+    }
+
+#search{
+    height: 22px;
+    width: 22px;
+    position:relative;
+    right: 100px;
+
+
+    /* display: none; */
+    }
+
+.conatiner{
+
+    width: 100%;
+    display: flex;
+    padding: 0px;
+justify-content: center;
+align-items: center;
+margin-left: 0px;
+/* background-color: aqua; */
+position: relative;
+margin-bottom: 20px;
+    /* display: none; */
+    
+    }
+
+#modeicon{
+
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    right: 30px;
+    cursor: pointer;
+    
+
+    /* display: none; */
+    }
+
+.note{
+
+    width: 100%;
+    height: 250px;
+    margin: 0px;
+    padding: 0px;
+justify-self:end;
+margin-bottom: 30px;
+
+
+
+    }
+
+.main-text{
+
+    height: 170px;
+    width: 100%;
+    padding: 15px;
+
+    }
+
+#main{
+    height: auto;
+    width: auto;
+    display: grid;
+    grid-template-columns: auto;
+    margin-left: 30px;
+    margin: 0;
+    padding: 0;
+
+    }
+.tool-bar{
+
+    width: 75px;
+    height: 35px;
+    justify-self: end;
+    } 
+
+.parent{
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+.addnote{
+    height: 70px;
+    width: 70px;
+    }
+
+button{
+    right: 30px;
+    bottom: 10px;
+    }
+
+.date{
+
+        padding: 0px;
+        margin-left:20px;
+        color: gray;
+        display: flex;
+        justify-self: left;
+
+    }
+
+
+    }
+
+
